@@ -25,6 +25,6 @@ class ReadableNumber
 
     private function getScript(): string
     {
-        return script_src('./assets/js/readable-number.min.js');
+        return script_src('./assets/js/readable-number.min.js?v=25032001');
     }
 }

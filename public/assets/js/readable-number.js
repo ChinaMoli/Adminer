@@ -37,6 +37,10 @@ const render = (td) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    const table = document.getElementById('table');
+    if (!table) {
+        return;
+    }
     document.querySelectorAll('#table tbody:last-child td[id^="val"]').forEach(td => render(td));
 
     // 监听表格新增
@@ -47,5 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             tbody.childNodes.forEach(tr => tr.childNodes.forEach(td => render(td)));
         });
-    })).observe(document.getElementById('table'), { childList: true, subtree: true });
+    })).observe(table, { childList: true, subtree: true });
 });
