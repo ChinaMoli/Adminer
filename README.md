@@ -3,7 +3,7 @@
 ## 部署
 ### 1、下载代码
 ```shell
-git clone git@github.com:ChinaMoli/Adminer.git . && ln entrance.php "./public/adminer-$(uuidgen | cut -c1-8).php"
+git clone https://github.com/ChinaMoli/Adminer.git . && ln entrance.php "./public/adminer-$(uuidgen | cut -c1-8).php"
 ```
 
 ### 2、配置 Nginx
