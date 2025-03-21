@@ -2,6 +2,11 @@
 
 ## 部署
 ### 1、下载代码
+🇨🇳 国内服务器请执行
+```shell
+git clone https://gitee.com/ChinaMoli/Adminer.git --depth=1 . && ln entrance.php "./public/adminer-$(uuidgen | cut -c1-8).php"
+```
+🌎 国外服务器请执行
 ```shell
 git clone https://github.com/ChinaMoli/Adminer.git --depth=1 . && ln entrance.php "./public/adminer-$(uuidgen | cut -c1-8).php"
 ```
