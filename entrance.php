@@ -1,6 +1,6 @@
 <?php
 
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 
 include __DIR__ . '/../core/functions.php';
 include __DIR__ . '/../core/adminer.php';
