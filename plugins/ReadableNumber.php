@@ -1,7 +1,5 @@
 <?php
 
-use function Adminer\script_src;
-
 class ReadableNumber
 {
     public function head()
@@ -25,6 +23,6 @@ class ReadableNumber
 
     private function getScript(): string
     {
-        return script_src('./assets/js/readable-number.min.js?v=25032002');
+        return script_src_with_version('./assets/js/readable-number.min.js');
     }
 }
