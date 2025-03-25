@@ -1,5 +1,7 @@
 <?php
 
+use Adminer\Plugins;
+
 const APP_VERSION = '1.1.0';
 
 include __DIR__ . '/../core/functions.php';
@@ -7,8 +9,6 @@ include __DIR__ . '/../core/adminer.php';
 
 function adminer_object()
 {
-    include __DIR__ . '/../core/plugin.php';
-
     $plugins = [];
     foreach (glob(__DIR__ . '/../plugins/*.php') as $path) {
         include_once $path;
@@ -16,7 +16,7 @@ function adminer_object()
         $plugins[] = new $class();
     }
 
-    return new class($plugins) extends \AdminerPlugin
+    return new class($plugins) extends Plugins
     {
         public function login($login, $password)
         {
