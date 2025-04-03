@@ -2,7 +2,7 @@
 
 use Adminer\Plugins;
 
-const APP_VERSION = '1.2.0';
+const APP_VERSION = '2.0.0';
 
 include __DIR__ . '/core/functions.php';
 include __DIR__ . '/core/adminer.php';
