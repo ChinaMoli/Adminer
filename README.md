@@ -4,11 +4,11 @@
 ### 1、下载代码
 🇨🇳 国内服务器请执行
 ```shell
-git clone https://gitee.com/ChinaMoli/Adminer.git --depth=1 . && ln entrance.php "./public/adminer-$(uuidgen | cut -c1-8).php"
+git clone https://gitee.com/ChinaMoli/Adminer.git --depth=1 .
 ```
 🌎 国外服务器请执行
 ```shell
-git clone https://github.com/ChinaMoli/Adminer.git --depth=1 . && ln entrance.php "./public/adminer-$(uuidgen | cut -c1-8).php"
+git clone https://github.com/ChinaMoli/Adminer.git --depth=1 .
 ```
 
 ### 2、配置 Nginx
@@ -22,11 +22,14 @@ server
 }
 ```
 
-### 3、访问 Adminer
-打开 `public` 目录找到以 `adminer-` 开头的文件并复制文件名。
+### 3、重命名入口文件
+> [!CAUTION]
+> 为了数据库安全，此步骤不能被跳过，否则将无法访问。
 
-打开浏览器输入 `http://` + `网站域名或 IP` + `/` + `复制的文件名` 即可访问。
-> 链接示例：`https://127.0.0.1/adminer-9218ce96.php`
+打开 `public` 目录，重命名 `index.php` 文件（建议使用 [1Password](https://1password.com/zh-cn/password-generator) 生成的随机密码作为文件名）。
+
+打开浏览器输入 `http://` + `网站域名或 IP:端口` + `/` + `新的文件名` 即可访问。
+> 链接示例：`https://127.0.0.1:8080/ucUPKUH05fFdZPb7dgas.php`
 
 ## 更新
 ```shell
