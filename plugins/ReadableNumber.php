@@ -1,6 +1,11 @@
 <?php
 
-class ReadableNumber
+use Adminer\Plugin;
+
+/**
+ * 将 UNIX 时间戳、IPv4Int 等数字转换为人类可读的格式
+ */
+class ReadableNumber extends Plugin
 {
     public function head()
     {
